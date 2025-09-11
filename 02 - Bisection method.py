@@ -1,3 +1,5 @@
+import sys
+
 # Funcão
 f_x = lambda x: x**3 + 4*x**2 - 10
 
@@ -14,7 +16,7 @@ while k <= N:
   if (FP == 0) or (abs(FP)<tol):
     print("A raiz é: ",p)
     print("Foram necessárias: ",k," execuções.")
-    break
+    sys.exit()
   if FA*FP>0:
     a = p
     FA = FP
