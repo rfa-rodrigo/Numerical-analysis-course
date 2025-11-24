@@ -1,13 +1,14 @@
 import sys
+import math
 
 # Funcão
-f_x = lambda x: x**3 + 4*x**2 - 10
+f_x = lambda x: 2**x-3*abs(x)
 
 k = 1
 N = 300
-tol = 10**(-8)
-a = 1
-b = 2
+tol = 0.05
+a = 0
+b = 1
 FA = f_x(a)
 
 while k <= N:
@@ -23,6 +24,7 @@ while k <= N:
   else:
     b = p
   k+=1
+  print(FP)
 
 print("Nenhuma raiz foi encontrada")
 
